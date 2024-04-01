@@ -6,7 +6,7 @@ test('Navigate to a product', async ({ page }) => {
     await page.goto('https://www.adidas.com/');
     await page.locator('li').filter({ hasText: 'HOMBREPRODUCTO' }).getByRole('menu').click();
     await page.getByRole('link', { name: 'Calzado • Hombre CALZADO' }).click();
-    await page.getByRole('link', { name: 'Zapatillas Campus 00s Negro Originals' }).click();
+    await page.getByRole('link', { name: 'Zapatillas Samba OG Negro Originals' }).nth(0).click();
 
     try {
         // Wait for the pop-up to appear with a timeout (e.g., 5 seconds)
@@ -28,7 +28,7 @@ test('Add item to cart', async ({ page }) => {
     await page.goto('https://www.adidas.com/');
     await page.locator('li').filter({ hasText: 'HOMBREPRODUCTO' }).getByRole('menu').click();
     await page.getByRole('link', { name: 'Calzado • Hombre CALZADO' }).click();
-    await page.getByRole('link', { name: 'Zapatillas Campus 00s Negro Originals' }).click();
+    await page.getByRole('link', { name: 'Zapatillas Samba OG Negro Originals' }).nth(0).click();
 
     try {
         // Wait for the pop-up to appear with a timeout (e.g., 5 seconds)
@@ -45,12 +45,12 @@ test('Add item to cart', async ({ page }) => {
     await page.getByRole('button', { name: 'Añadir al carrito' }).click();
 });
 
-test.only('View cart', async ({ page }) => {
+test('View cart', async ({ page }) => {
     await page.setViewportSize({ width: 1920, height: 1080 });
     await page.goto('https://www.adidas.com/');
     await page.locator('li').filter({ hasText: 'HOMBREPRODUCTO' }).getByRole('menu').click();
     await page.getByRole('link', { name: 'Calzado • Hombre CALZADO' }).click();
-    await page.getByRole('link', { name: 'Zapatillas Campus 00s Negro Originals' }).click();
+    await page.getByRole('link', { name: 'Zapatillas Samba OG Negro Originals' }).nth(0).click();
 
     try {
         // Wait for the pop-up to appear with a timeout (e.g., 5 seconds)
